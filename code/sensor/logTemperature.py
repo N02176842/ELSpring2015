@@ -24,7 +24,7 @@ try:
     con = mydb.connect('temperature.db')
     cur = con.cursor()    
     cur.execute("INSERT INTO Temp VALUES(?, ?, ?)", (currentTime, tempC, tempF))
-    con.commit
+    con.commit();
     print  "Temperature Logged"
                    
 except mydb.Error, e:
