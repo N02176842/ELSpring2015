@@ -15,15 +15,16 @@ def readTemp():
     tempfile.close()
     tempC = float(tempfile_text.split("\n")[1].split("t=")[1])/1000
     tempF = tempC*9.0/5.0+32.0
-    print "Current temperature is: " + str(tempC) + " C , ” + str(tempF) + " F"
+    print "Current temperature is: " + str(tempC) + " C , " + str(tempF) + " F"
     
 readTemp()
 
 con = None
 try:
-    con = mydb.connect('test.db')
+    con = mydb.connect('temperature.db')
     cur = con.cursor()    
-    cur.execute('INSERT INTO TempData VALUES ('+'"'+timeString+'"' +','+str(tempC)+','+str(tempF)+')')
+    cur.execute("INSERT INTO Temp VALUES(?, ?, ?)", (currentTime, tempC, tempF))
+    con.commit
     print  "Temperature Logged"
                    
 except mydb.Error, e:
