@@ -1,0 +1,1 @@
+The porpose of this Program is to capture the current time and temperature sensor everytime it gets run, and store them in a temperature.db file, which has a table called TempV that contains all the data in it
