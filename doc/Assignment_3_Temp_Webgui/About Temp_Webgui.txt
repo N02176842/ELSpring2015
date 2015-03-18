@@ -1,0 +1,5 @@
+
+
+Description:
+
+In this assignment, we will capture the time current temperature and date and time, and store them in a ‘temp log.db’ file that is located in /var/www directory. Then we create two python scripts ‘monitor.py’ and ‘webgui.py’ and save them in the /usr/lib/cgi-bin/ directory. Note: for this step we will need to install apache2, and make the python code executable by user. The ‘monitor.py’ will capture the current temperature and data/time, and store them inside the ‘temp log’.db’ in the /var/www directory. The ‘webgui.py’ will then take the data from the ‘temp log.db’ file and show them on the graph on the website page. 
